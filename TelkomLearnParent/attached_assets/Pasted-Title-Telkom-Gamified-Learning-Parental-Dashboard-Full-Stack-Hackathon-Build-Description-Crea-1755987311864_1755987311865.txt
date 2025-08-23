@@ -1,0 +1,72 @@
+Title: Telkom Gamified Learning & Parental Dashboard – Full Stack Hackathon Build
+Description: Create a modern full-stack web application that mirrors Telkom’s MyTelkom app UI/UX. The app has two parts:
+1. Part A – Parental Dashboard: Allows the administrator (parent) who buys Telkom data to manage how family members use data. The admin can toggle study mode, whitelist educational sites, blacklist entertainment apps, and view detailed usage reports. It also supports different user roles: Parent (admin), Student, and Elderly (18+ who can self-restrict).
+2. Part B – Gamified Learning App: Provides a React quiz game for students. It tests general knowledge, displays the score, and stores results in the database.
+The system must strictly follow Telkom’s branding, UI, and design patterns (blue-and-white theme, Telkom fonts, clean layout).
+🔹 Virtual Environment Setup
+1. Create a Python virtual environment (venv).
+2. Install backend dependencies:
+
+pip install flask flask-sqlalchemy flask-login pandas matplotlib seaborn plotly sqlite3 reportlab
+Frontend stack: React + Tailwind CSS.
+Ensure backend and frontend communicate via REST API. 🔹 System Requirements Part A – Parental Dashboard (Admin Control)
+Roles:
+Admin Parent: Purchases data, manages household accounts.
+Student User: Child/teen connected to the router.
+Elderly User: 18+ member who can restrict apps for themselves.
+Features:
+Toggle Study Mode ON/OFF.
+Whitelist e-learning apps (e.g., Khan Academy, YouTube Learning).
+Blacklist entertainment apps (TikTok, Instagram, etc.).
+View weekly usage reports (study vs distraction time).
+Generate pie charts & bar graphs with Plotly/Matplotlib.
+Role-based dashboards with different UI for Parent, Student, Elderly. Database (Backend Spec) Use SQLite database with tables:
+users → Stores user roles (Parent, Student, Adults).
+rules → Study mode settings, whitelist/blacklist.
+reports → Usage analytics data (mocked sessions).
+quiz_scores → Student quiz game scores.
+Enable Flask-Login authentication for secure sessions. Analytics Dashboard (Data Analyst Spec)
+Generate reports using pandas + plotly.
+Allow CSV/PDF export for weekly reports.
+Simple AI recommendation rule: If distractions > 50%, suggest stricter study mode. Part B – Gamified Learning (Student Zone)
+A React-based quiz game with 5–10 general knowledge questions.
+Student answers → Score is calculated & displayed.
+Scores are saved into the quiz_scores table.
+Clean, educational, and rewarding design in Telkom’s style. 🔹 UI/UX Design Guidelines (Strict)
+Theme: Telkom blue & white.
+Typography: Match MyTelkom app fonts.
+UX Flow:
+Parent logs in → toggles study mode → views usage report.
+Student logs in → sees restrictions → plays quiz game.
+Above 18 logs in → manages self-restrictions.
+Responsive design: Mobile-first, clean, professional. 🔹 Navigation (Project Manager Spec)
+Home (Welcome + Login options).
+Study Mode (Toggle, whitelist, blacklist).
+Reports (childs and users performance + downloads).
+
+Admin Dashboard (Overview of usage + family accounts). 🔹 Project Structure
+/backend
+   ├── app.py (Flask entry point)
+   ├── models.py (SQLAlchemy models)
+   ├── routes.py (API endpoints)
+   ├── auth.py (User authentication)
+   ├── /templates
+   ├── /static
+   └── /data/app.db
+
+/frontend
+   ├── src/
+   │   ├── pages/ (Home, Dashboard, Reports, Login)
+   │   ├── components/ (Navbar, Buttons, Charts)
+   │   ├── styles/ (Telkom branding)
+   └── tailwind.config.js
+🔹 Delivery & Startup Commands
+Backend:
+
+cd backend && flask run --host=0.0.0.0 --port=5000
+Frontend:
+
+cd frontend && npm run start
+⚡ End Goal: A launch-ready Telkom-style full-stack system built in Replit with: ✅ Virtual environment & dependencies ✅ Flask + React stack ✅ SQLite database with authentication ✅ Role-based dashboards ✅ Analytics & reports (downloadable) ✅ Gamified quiz for students ✅ Strict Telkom UI/UX design
+
+give me a prompt for replit that will create a fully functional modern website that keeps the telkom UI/UX look and feel, it must give progress of each user under the parent admin. Don't complicate the UI/UX just put the functionalities that i have only stated keep it simple, modern and professional, stick to the concept dont do anything thats too much keep it beautiful, professional and keep it simple but siphiasticated so for the parents who arent tech savy, make the core functionalities fully function, i want a toggle that will change the pages feom dark mode to light mode fully working make this work please
